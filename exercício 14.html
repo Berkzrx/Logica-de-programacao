@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chutar número corretamente</title>
+</head>
+<body>
+    <script>
+        /*
+        PROBLEMA:
+            Escreva um programa que, ao iniciar gera um valor aleatório
+            de 1 a 10 e permite que o usuário chute um número até que o 
+            valor aleatório gerado no início do programa seja chutado corretamente.
+
+            O programa deve informar s o chute foi acima, abixo ou igual ao valoe aleatório gerado no início do programa.
+
+        ALGORÍTMO:
+            - mostrar mensagem "JOGO: CHUTE UM NÚMERO DE 1 À 10 E VEJA SE ACERTOU!"
+            - gerar um número aleatório de 1 à 10
+            - armazenar este dado
+            - pedir um número de 1 à 10 ao usuário através de uma caixa de entrada
+            - converter de string para número
+            - armazenar este dado
+            - comparar os dois números
+            - se os numeros forem iguais, mostrar mensagem 'parabéns'
+            - se o numero do usuario for MAIOR que o numero aleatorio gerado, mostrar mensagem 'seu numero foi maior'
+            - se o numero do usuario for MENOR que o numero aleatorio gerado, mostrar mensagem 'seu numero foi menor'
+
+        */
+        window.confirm('JOGO: CHUTE UM NÚMERO DE 1 À 10 E VEJA SE ACERTOU!');
+
+        var numero_Aleatorio = parseInt(Math.random() * 11);
+        var numero_Usuario = Number(window.prompt('Chute um número de 1 à 10.'));
+
+        if(numero_Usuario === numero_Aleatorio){
+            window.alert('Você acertou. Parabéns!');
+
+        }else if(numero_Usuario > numero_Aleatorio){
+            window.alert(`O seu chute: (${numero_Usuario}) foi MAIOR que o número correto: (${numero_Aleatorio})`);
+
+        }else{
+            window.alert(`O seu chute: (${numero_Usuario}) foi MENOR que o número correto: (${numero_Aleatorio})`);
+        }
+
+
+
+    </script>
+</body>
+</html>
